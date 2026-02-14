@@ -3,6 +3,11 @@
 from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy as np
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = os.path.join(BASE_DIR, "model.pkl")
 
 # Load the trained model
 model_path = 'model.pkl'
